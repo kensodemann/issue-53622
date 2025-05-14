@@ -12,6 +12,6 @@ export class HomePage {
   constructor() {}
 
   openBrowser() {
-    Browser.open({ url: 'https://www.npr.org' });
+    Browser.open({ url: 'https://www.npr.org', windowName: '_system' });
   }
 }
