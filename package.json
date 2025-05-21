@@ -4,7 +4,7 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "build": "ng build && cap copy",
+    "build": "ng build && cap sync",
     "lint": "ng lint",
     "ng": "ng",
     "prepare": "husky",
@@ -27,6 +27,7 @@
     "@capacitor/browser": "^7.0.1",
     "@capacitor/core": "7.2.0",
     "@capacitor/haptics": "7.0.1",
+    "@capacitor/inappbrowser": "^2.1.0",
     "@capacitor/ios": "^7.2.0",
     "@capacitor/keyboard": "7.0.1",
     "@capacitor/status-bar": "7.0.1",

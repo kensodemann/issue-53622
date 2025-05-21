@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Browser } from '@capacitor/browser';
+import { DefaultSystemBrowserOptions, InAppBrowser } from '@capacitor/inappbrowser';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton } from '@ionic/angular/standalone';
 
 @Component({
@@ -13,5 +14,18 @@ export class HomePage {
 
   openBrowser() {
     Browser.open({ url: 'https://www.npr.org', windowName: '_system' });
+  }
+
+  openExternalIAB() {
+    InAppBrowser.openInExternalBrowser({
+      url: 'https://www.npr.org',
+    });
+  }
+
+  openSystemIAB() {
+    InAppBrowser.openInSystemBrowser({
+      url: 'https://www.npr.org',
+      options: DefaultSystemBrowserOptions,
+    });
   }
 }
